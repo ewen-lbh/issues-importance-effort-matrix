@@ -1,0 +1,281 @@
+#42 (Create account form changes width along with password feedback) more important #43 (Validate forms with Superforms) (y/n)>y
+#41 (Switch to autoincrement numbers for IDs) more important #43 (Validate forms with Superforms) (y/n)>y
+#40 (Layout should not be on 2 columns on mobile) more important #43 (Validate forms with Superforms) (y/n)>y
+#39 (Add a /owners area for admins) more important #43 (Validate forms with Superforms) (y/n)>n
+#38 (Make dark theme less dark) more important #43 (Validate forms with Superforms) (y/n)>y
+#37 (Differentiate owners between agencies and people) more important #43 (Validate forms with Superforms) (y/n)>n
+#36 (Add filter on last updated year) more important #43 (Validate forms with Superforms) (y/n)>y
+#35 (Implement bulk actions) more important #43 (Validate forms with Superforms) (y/n)>y
+#34 (Sort by most recently updated first) more important #43 (Validate forms with Superforms) (y/n)>y
+#33 (Indicate position of images when uploading) more important #43 (Validate forms with Superforms) (y/n)>y
+#32 (Make warning message below description field clearer) more important #43 (Validate forms with Superforms) (y/n)>y
+#31 (Add links to owner's email and phone number) more important #43 (Validate forms with Superforms) (y/n)>y
+#30 (Old data import: lowercase emails) more important #43 (Validate forms with Superforms) (y/n)>y
+#29 (Toolbar on rich text input has a too stark contrast) more important #43 (Validate forms with Superforms) (y/n)>y
+#28 (Make description more proeminent than aspects) more important #43 (Validate forms with Superforms) (y/n)>y
+#27 (Replace search primary button with a button to switch between map and list views) more important #43 (Validate forms with Superforms) (y/n)>y
+#26 (Add button to close marker popup on map) more important #43 (Validate forms with Superforms) (y/n)>y
+#25 (.ics export: use total amount) more important #43 (Validate forms with Superforms) (y/n)>y
+#23 (Use a virtual list) more important #43 (Validate forms with Superforms) (y/n)>y
+#22 (Add button to rotate images) more important #43 (Validate forms with Superforms) (y/n)>n
+#21 (Add CONTRIBUTING.md) more important #43 (Validate forms with Superforms) (y/n)>y
+#20 (Missing UX for browser-checked input validation) more important #43 (Validate forms with Superforms) (y/n)>y
+#18 (admin: Change info displayed on items) more important #43 (Validate forms with Superforms) (y/n)>y
+#17 (admin: close other items when opening one) more important #43 (Validate forms with Superforms) (y/n)>y
+#16 (Availablity date not restored when going back to add form) more important #43 (Validate forms with Superforms) (y/n)>y
+#13 (Address location is not always set) more important #43 (Validate forms with Superforms) (y/n)>y
+#12 (Redirect to previous page after login/logout) more important #43 (Validate forms with Superforms) (y/n)>y
+#9 (Can't reorder photos on mobile) more important #43 (Validate forms with Superforms) (y/n)>y
+#8 (Save buttons on /account should not take entire width) more important #43 (Validate forms with Superforms) (y/n)>y
+#7 (Darkmode maps) more important #43 (Validate forms with Superforms) (y/n)>y
+#4 (413 Request Entity Too Large when uploading some photos) more important #43 (Validate forms with Superforms) (y/n)>y
+#3 (Appartment description is not restored when editing an appartment) more important #43 (Validate forms with Superforms) (y/n)>y
+#37 (Differentiate owners between agencies and people) more important #39 (Add a /owners area for admins) (y/n)>y
+#22 (Add button to rotate images) more important #39 (Add a /owners area for admins) (y/n)>y
+#22 (Add button to rotate images) more important #37 (Differentiate owners between agencies and people) (y/n)>n
+#41 (Switch to autoincrement numbers for IDs) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#40 (Layout should not be on 2 columns on mobile) more important #42 (Create account form changes width along with password feedback) (y/n)>y
+#38 (Make dark theme less dark) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#36 (Add filter on last updated year) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#35 (Implement bulk actions) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#34 (Sort by most recently updated first) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#33 (Indicate position of images when uploading) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#32 (Make warning message below description field clearer) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#31 (Add links to owner's email and phone number) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#30 (Old data import: lowercase emails) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#29 (Toolbar on rich text input has a too stark contrast) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#28 (Make description more proeminent than aspects) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#27 (Replace search primary button with a button to switch between map and list views) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#26 (Add button to close marker popup on map) more important #42 (Create account form changes width along with password feedback) (y/n)>y
+#25 (.ics export: use total amount) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#23 (Use a virtual list) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#21 (Add CONTRIBUTING.md) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#20 (Missing UX for browser-checked input validation) more important #42 (Create account form changes width along with password feedback) (y/n)>y
+#18 (admin: Change info displayed on items) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#17 (admin: close other items when opening one) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#16 (Availablity date not restored when going back to add form) more important #42 (Create account form changes width along with password feedback) (y/n)>y
+#13 (Address location is not always set) more important #42 (Create account form changes width along with password feedback) (y/n)>y
+#12 (Redirect to previous page after login/logout) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#9 (Can't reorder photos on mobile) more important #42 (Create account form changes width along with password feedback) (y/n)>y
+#8 (Save buttons on /account should not take entire width) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#7 (Darkmode maps) more important #42 (Create account form changes width along with password feedback) (y/n)>n
+#4 (413 Request Entity Too Large when uploading some photos) more important #42 (Create account form changes width along with password feedback) (y/n)>y
+#3 (Appartment description is not restored when editing an appartment) more important #42 (Create account form changes width along with password feedback) (y/n)>y
+#38 (Make dark theme less dark) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#36 (Add filter on last updated year) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#35 (Implement bulk actions) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>n
+#34 (Sort by most recently updated first) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#33 (Indicate position of images when uploading) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#32 (Make warning message below description field clearer) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#31 (Add links to owner's email and phone number) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#30 (Old data import: lowercase emails) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#29 (Toolbar on rich text input has a too stark contrast) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#28 (Make description more proeminent than aspects) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#27 (Replace search primary button with a button to switch between map and list views) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#25 (.ics export: use total amount) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#23 (Use a virtual list) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#21 (Add CONTRIBUTING.md) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>n
+#18 (admin: Change info displayed on items) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#17 (admin: close other items when opening one) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#12 (Redirect to previous page after login/logout) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#8 (Save buttons on /account should not take entire width) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#7 (Darkmode maps) more important #41 (Switch to autoincrement numbers for IDs) (y/n)>n
+#21 (Add CONTRIBUTING.md) more important #35 (Implement bulk actions) (y/n)>n
+#7 (Darkmode maps) more important #35 (Implement bulk actions) (y/n)>n
+#7 (Darkmode maps) more important #21 (Add CONTRIBUTING.md) (y/n)>y
+#36 (Add filter on last updated year) more important #38 (Make dark theme less dark) (y/n)>y
+#34 (Sort by most recently updated first) more important #38 (Make dark theme less dark) (y/n)>y
+#33 (Indicate position of images when uploading) more important #38 (Make dark theme less dark) (y/n)>y
+#32 (Make warning message below description field clearer) more important #38 (Make dark theme less dark) (y/n)>y
+#31 (Add links to owner's email and phone number) more important #38 (Make dark theme less dark) (y/n)>n
+#30 (Old data import: lowercase emails) more important #38 (Make dark theme less dark) (y/n)>n
+#29 (Toolbar on rich text input has a too stark contrast) more important #38 (Make dark theme less dark) (y/n)>y
+#28 (Make description more proeminent than aspects) more important #38 (Make dark theme less dark) (y/n)>y
+#27 (Replace search primary button with a button to switch between map and list views) more important #38 (Make dark theme less dark) (y/n)>y
+#25 (.ics export: use total amount) more important #38 (Make dark theme less dark) (y/n)>n
+#23 (Use a virtual list) more important #38 (Make dark theme less dark) (y/n)>n
+#18 (admin: Change info displayed on items) more important #38 (Make dark theme less dark) (y/n)>y
+#17 (admin: close other items when opening one) more important #38 (Make dark theme less dark) (y/n)>n
+#12 (Redirect to previous page after login/logout) more important #38 (Make dark theme less dark) (y/n)>n
+#8 (Save buttons on /account should not take entire width) more important #38 (Make dark theme less dark) (y/n)>y
+#30 (Old data import: lowercase emails) more important #31 (Add links to owner's email and phone number) (y/n)>n
+#25 (.ics export: use total amount) more important #31 (Add links to owner's email and phone number) (y/n)>n
+#23 (Use a virtual list) more important #31 (Add links to owner's email and phone number) (y/n)>n
+#17 (admin: close other items when opening one) more important #31 (Add links to owner's email and phone number) (y/n)>n
+#12 (Redirect to previous page after login/logout) more important #31 (Add links to owner's email and phone number) (y/n)>n
+#25 (.ics export: use total amount) more important #30 (Old data import: lowercase emails) (y/n)>n
+#23 (Use a virtual list) more important #30 (Old data import: lowercase emails) (y/n)>n
+#17 (admin: close other items when opening one) more important #30 (Old data import: lowercase emails) (y/n)>n
+#12 (Redirect to previous page after login/logout) more important #30 (Old data import: lowercase emails) (y/n)>n
+#23 (Use a virtual list) more important #25 (.ics export: use total amount) (y/n)>n
+#17 (admin: close other items when opening one) more important #25 (.ics export: use total amount) (y/n)>y
+#12 (Redirect to previous page after login/logout) more important #25 (.ics export: use total amount) (y/n)>n
+#12 (Redirect to previous page after login/logout) more important #23 (Use a virtual list) (y/n)>y
+#34 (Sort by most recently updated first) more important #36 (Add filter on last updated year) (y/n)>y
+#33 (Indicate position of images when uploading) more important #36 (Add filter on last updated year) (y/n)>y
+#32 (Make warning message below description field clearer) more important #36 (Add filter on last updated year) (y/n)>y
+#29 (Toolbar on rich text input has a too stark contrast) more important #36 (Add filter on last updated year) (y/n)>y
+#28 (Make description more proeminent than aspects) more important #36 (Add filter on last updated year) (y/n)>y
+#27 (Replace search primary button with a button to switch between map and list views) more important #36 (Add filter on last updated year) (y/n)>y
+#18 (admin: Change info displayed on items) more important #36 (Add filter on last updated year) (y/n)>y
+#8 (Save buttons on /account should not take entire width) more important #36 (Add filter on last updated year) (y/n)>y
+#33 (Indicate position of images when uploading) more important #34 (Sort by most recently updated first) (y/n)>y
+#32 (Make warning message below description field clearer) more important #34 (Sort by most recently updated first) (y/n)>y
+#29 (Toolbar on rich text input has a too stark contrast) more important #34 (Sort by most recently updated first) (y/n)>y
+#28 (Make description more proeminent than aspects) more important #34 (Sort by most recently updated first) (y/n)>y
+#27 (Replace search primary button with a button to switch between map and list views) more important #34 (Sort by most recently updated first) (y/n)>y
+#18 (admin: Change info displayed on items) more important #34 (Sort by most recently updated first) (y/n)>y
+#8 (Save buttons on /account should not take entire width) more important #34 (Sort by most recently updated first) (y/n)>y
+#32 (Make warning message below description field clearer) more important #33 (Indicate position of images when uploading) (y/n)>y
+#29 (Toolbar on rich text input has a too stark contrast) more important #33 (Indicate position of images when uploading) (y/n)>n
+#28 (Make description more proeminent than aspects) more important #33 (Indicate position of images when uploading) (y/n)>n
+#27 (Replace search primary button with a button to switch between map and list views) more important #33 (Indicate position of images when uploading) (y/n)>y
+#18 (admin: Change info displayed on items) more important #33 (Indicate position of images when uploading) (y/n)>y
+#8 (Save buttons on /account should not take entire width) more important #33 (Indicate position of images when uploading) (y/n)>n
+#28 (Make description more proeminent than aspects) more important #29 (Toolbar on rich text input has a too stark contrast) (y/n)>n
+#8 (Save buttons on /account should not take entire width) more important #29 (Toolbar on rich text input has a too stark contrast) (y/n)>n
+#8 (Save buttons on /account should not take entire width) more important #28 (Make description more proeminent than aspects) (y/n)>y
+#27 (Replace search primary button with a button to switch between map and list views) more important #32 (Make warning message below description field clearer) (y/n)>y
+#18 (admin: Change info displayed on items) more important #32 (Make warning message below description field clearer) (y/n)>n
+#26 (Add button to close marker popup on map) more important #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#20 (Missing UX for browser-checked input validation) more important #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#16 (Availablity date not restored when going back to add form) more important #40 (Layout should not be on 2 columns on mobile) (y/n)>y
+#13 (Address location is not always set) more important #40 (Layout should not be on 2 columns on mobile) (y/n)>y
+#9 (Can't reorder photos on mobile) more important #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#4 (413 Request Entity Too Large when uploading some photos) more important #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#3 (Appartment description is not restored when editing an appartment) more important #40 (Layout should not be on 2 columns on mobile) (y/n)>y
+#20 (Missing UX for browser-checked input validation) more important #26 (Add button to close marker popup on map) (y/n)>n
+#9 (Can't reorder photos on mobile) more important #26 (Add button to close marker popup on map) (y/n)>n
+#4 (413 Request Entity Too Large when uploading some photos) more important #26 (Add button to close marker popup on map) (y/n)>y
+#9 (Can't reorder photos on mobile) more important #20 (Missing UX for browser-checked input validation) (y/n)>n
+#13 (Address location is not always set) more important #16 (Availablity date not restored when going back to add form) (y/n)>n
+#3 (Appartment description is not restored when editing an appartment) more important #16 (Availablity date not restored when going back to add form) (y/n)>y
+#42 (Create account form changes width along with password feedback) easier #43 (Validate forms with Superforms) (y/n)>n
+#41 (Switch to autoincrement numbers for IDs) easier #43 (Validate forms with Superforms) (y/n)>y
+#40 (Layout should not be on 2 columns on mobile) easier #43 (Validate forms with Superforms) (y/n)>y
+#39 (Add a /owners area for admins) easier #43 (Validate forms with Superforms) (y/n)>n
+#38 (Make dark theme less dark) easier #43 (Validate forms with Superforms) (y/n)>y
+#37 (Differentiate owners between agencies and people) easier #43 (Validate forms with Superforms) (y/n)>n
+#36 (Add filter on last updated year) easier #43 (Validate forms with Superforms) (y/n)>y
+#35 (Implement bulk actions) easier #43 (Validate forms with Superforms) (y/n)>n
+#34 (Sort by most recently updated first) easier #43 (Validate forms with Superforms) (y/n)>y
+#33 (Indicate position of images when uploading) easier #43 (Validate forms with Superforms) (y/n)>y
+#32 (Make warning message below description field clearer) easier #43 (Validate forms with Superforms) (y/n)>y
+#31 (Add links to owner's email and phone number) easier #43 (Validate forms with Superforms) (y/n)>y
+#30 (Old data import: lowercase emails) easier #43 (Validate forms with Superforms) (y/n)>y
+#29 (Toolbar on rich text input has a too stark contrast) easier #43 (Validate forms with Superforms) (y/n)>y
+#28 (Make description more proeminent than aspects) easier #43 (Validate forms with Superforms) (y/n)>y
+#27 (Replace search primary button with a button to switch between map and list views) easier #43 (Validate forms with Superforms) (y/n)>y
+#26 (Add button to close marker popup on map) easier #43 (Validate forms with Superforms) (y/n)>n
+#25 (.ics export: use total amount) easier #43 (Validate forms with Superforms) (y/n)>y
+#23 (Use a virtual list) easier #43 (Validate forms with Superforms) (y/n)>n
+#22 (Add button to rotate images) easier #43 (Validate forms with Superforms) (y/n)>n
+#21 (Add CONTRIBUTING.md) easier #43 (Validate forms with Superforms) (y/n)>n
+#20 (Missing UX for browser-checked input validation) easier #43 (Validate forms with Superforms) (y/n)>y
+#18 (admin: Change info displayed on items) easier #43 (Validate forms with Superforms) (y/n)>y
+#17 (admin: close other items when opening one) easier #43 (Validate forms with Superforms) (y/n)>y
+#16 (Availablity date not restored when going back to add form) easier #43 (Validate forms with Superforms) (y/n)>y
+#13 (Address location is not always set) easier #43 (Validate forms with Superforms) (y/n)>y
+#12 (Redirect to previous page after login/logout) easier #43 (Validate forms with Superforms) (y/n)>y
+#9 (Can't reorder photos on mobile) easier #43 (Validate forms with Superforms) (y/n)>n
+#8 (Save buttons on /account should not take entire width) easier #43 (Validate forms with Superforms) (y/n)>y
+#7 (Darkmode maps) easier #43 (Validate forms with Superforms) (y/n)>n
+#4 (413 Request Entity Too Large when uploading some photos) easier #43 (Validate forms with Superforms) (y/n)>n
+#3 (Appartment description is not restored when editing an appartment) easier #43 (Validate forms with Superforms) (y/n)>n
+#39 (Add a /owners area for admins) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#37 (Differentiate owners between agencies and people) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#35 (Implement bulk actions) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#26 (Add button to close marker popup on map) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#23 (Use a virtual list) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#22 (Add button to rotate images) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#21 (Add CONTRIBUTING.md) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#9 (Can't reorder photos on mobile) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#7 (Darkmode maps) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#4 (413 Request Entity Too Large when uploading some photos) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#3 (Appartment description is not restored when editing an appartment) easier #42 (Create account form changes width along with password feedback) (y/n)>y
+#37 (Differentiate owners between agencies and people) easier #39 (Add a /owners area for admins) (y/n)>y
+#35 (Implement bulk actions) easier #39 (Add a /owners area for admins) (y/n)>n
+#26 (Add button to close marker popup on map) easier #39 (Add a /owners area for admins) (y/n)>y
+#23 (Use a virtual list) easier #39 (Add a /owners area for admins) (y/n)>y
+#22 (Add button to rotate images) easier #39 (Add a /owners area for admins) (y/n)>n
+#21 (Add CONTRIBUTING.md) easier #39 (Add a /owners area for admins) (y/n)>y
+#9 (Can't reorder photos on mobile) easier #39 (Add a /owners area for admins) (y/n)>n
+#7 (Darkmode maps) easier #39 (Add a /owners area for admins) (y/n)>n
+#4 (413 Request Entity Too Large when uploading some photos) easier #39 (Add a /owners area for admins) (y/n)>n
+#3 (Appartment description is not restored when editing an appartment) easier #39 (Add a /owners area for admins) (y/n)>n
+#22 (Add button to rotate images) easier #35 (Implement bulk actions) (y/n)>n
+#9 (Can't reorder photos on mobile) easier #35 (Implement bulk actions) (y/n)>y
+#7 (Darkmode maps) easier #35 (Implement bulk actions) (y/n)>n
+#4 (413 Request Entity Too Large when uploading some photos) easier #35 (Implement bulk actions) (y/n)>n
+#3 (Appartment description is not restored when editing an appartment) easier #35 (Implement bulk actions) (y/n)>n
+#7 (Darkmode maps) easier #22 (Add button to rotate images) (y/n)>n
+#4 (413 Request Entity Too Large when uploading some photos) easier #22 (Add button to rotate images) (y/n)>n
+#3 (Appartment description is not restored when editing an appartment) easier #22 (Add button to rotate images) (y/n)>n
+#4 (413 Request Entity Too Large when uploading some photos) easier #7 (Darkmode maps) (y/n)>y
+#3 (Appartment description is not restored when editing an appartment) easier #7 (Darkmode maps) (y/n)>y
+#3 (Appartment description is not restored when editing an appartment) easier #4 (413 Request Entity Too Large when uploading some photos) (y/n)>n
+#26 (Add button to close marker popup on map) easier #37 (Differentiate owners between agencies and people) (y/n)>n
+#23 (Use a virtual list) easier #37 (Differentiate owners between agencies and people) (y/n)>n
+#21 (Add CONTRIBUTING.md) easier #37 (Differentiate owners between agencies and people) (y/n)>n
+#23 (Use a virtual list) easier #26 (Add button to close marker popup on map) (y/n)>n
+#21 (Add CONTRIBUTING.md) easier #26 (Add button to close marker popup on map) (y/n)>y
+#40 (Layout should not be on 2 columns on mobile) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#38 (Make dark theme less dark) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#36 (Add filter on last updated year) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#34 (Sort by most recently updated first) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#33 (Indicate position of images when uploading) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#32 (Make warning message below description field clearer) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#31 (Add links to owner's email and phone number) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#30 (Old data import: lowercase emails) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#29 (Toolbar on rich text input has a too stark contrast) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#28 (Make description more proeminent than aspects) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#27 (Replace search primary button with a button to switch between map and list views) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#25 (.ics export: use total amount) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#20 (Missing UX for browser-checked input validation) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>n
+#18 (admin: Change info displayed on items) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>n
+#17 (admin: close other items when opening one) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#16 (Availablity date not restored when going back to add form) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>n
+#13 (Address location is not always set) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>n
+#12 (Redirect to previous page after login/logout) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>n
+#8 (Save buttons on /account should not take entire width) easier #41 (Switch to autoincrement numbers for IDs) (y/n)>y
+#18 (admin: Change info displayed on items) easier #20 (Missing UX for browser-checked input validation) (y/n)>y
+#16 (Availablity date not restored when going back to add form) easier #20 (Missing UX for browser-checked input validation) (y/n)>n
+#13 (Address location is not always set) easier #20 (Missing UX for browser-checked input validation) (y/n)>n
+#12 (Redirect to previous page after login/logout) easier #20 (Missing UX for browser-checked input validation) (y/n)>y
+#13 (Address location is not always set) easier #16 (Availablity date not restored when going back to add form) (y/n)>n
+#12 (Redirect to previous page after login/logout) easier #18 (admin: Change info displayed on items) (y/n)>n
+#38 (Make dark theme less dark) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>y
+#36 (Add filter on last updated year) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#34 (Sort by most recently updated first) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#33 (Indicate position of images when uploading) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#32 (Make warning message below description field clearer) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#31 (Add links to owner's email and phone number) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>y
+#30 (Old data import: lowercase emails) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>y
+#29 (Toolbar on rich text input has a too stark contrast) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>y
+#28 (Make description more proeminent than aspects) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#27 (Replace search primary button with a button to switch between map and list views) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#25 (.ics export: use total amount) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>y
+#17 (admin: close other items when opening one) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#8 (Save buttons on /account should not take entire width) easier #40 (Layout should not be on 2 columns on mobile) (y/n)>n
+#34 (Sort by most recently updated first) easier #36 (Add filter on last updated year) (y/n)>y
+#33 (Indicate position of images when uploading) easier #36 (Add filter on last updated year) (y/n)>n
+#32 (Make warning message below description field clearer) easier #36 (Add filter on last updated year) (y/n)>y
+#28 (Make description more proeminent than aspects) easier #36 (Add filter on last updated year) (y/n)>n
+#27 (Replace search primary button with a button to switch between map and list views) easier #36 (Add filter on last updated year) (y/n)>y
+#17 (admin: close other items when opening one) easier #36 (Add filter on last updated year) (y/n)>y
+#8 (Save buttons on /account should not take entire width) easier #36 (Add filter on last updated year) (y/n)>n
+#28 (Make description more proeminent than aspects) easier #33 (Indicate position of images when uploading) (y/n)>y
+#8 (Save buttons on /account should not take entire width) easier #33 (Indicate position of images when uploading) (y/n)>y
+#8 (Save buttons on /account should not take entire width) easier #28 (Make description more proeminent than aspects) (y/n)>y
+#32 (Make warning message below description field clearer) easier #34 (Sort by most recently updated first) (y/n)>n
+#27 (Replace search primary button with a button to switch between map and list views) easier #34 (Sort by most recently updated first) (y/n)>n
+#17 (admin: close other items when opening one) easier #34 (Sort by most recently updated first) (y/n)>n
+#27 (Replace search primary button with a button to switch between map and list views) easier #32 (Make warning message below description field clearer) (y/n)>y
+#17 (admin: close other items when opening one) easier #32 (Make warning message below description field clearer) (y/n)>y
+#17 (admin: close other items when opening one) easier #27 (Replace search primary button with a button to switch between map and list views) (y/n)>y
+#31 (Add links to owner's email and phone number) easier #38 (Make dark theme less dark) (y/n)>n
+#30 (Old data import: lowercase emails) easier #38 (Make dark theme less dark) (y/n)>y
+#29 (Toolbar on rich text input has a too stark contrast) easier #38 (Make dark theme less dark) (y/n)>n
+#25 (.ics export: use total amount) easier #38 (Make dark theme less dark) (y/n)>y
+#29 (Toolbar on rich text input has a too stark contrast) easier #31 (Add links to owner's email and phone number) (y/n)>n
+#25 (.ics export: use total amount) easier #30 (Old data import: lowercase emails) (y/n)>n
