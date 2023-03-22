@@ -55,16 +55,6 @@
 
 <input type="checkbox" name="sorting" id="sorting" bind:checked={sorting} on:change={saveChanges} />
 
-<button
-	on:click={() => {
-		dialog.showModal();
-	}}>binsort</button
->
-
-<dialog bind:this={dialog}>
-    
-</dialog>
-
 {#if sorting}
 	<div class="packed">
 		<!-- <h2>Importance (current)</h2> -->
@@ -122,9 +112,11 @@
 		style:--rows={issuesMatrix[0]?.length ?? 0}
 		style:--cols={issuesMatrix.length}
 	>
-		{#each issuesMatrix as row}
-			{#each row as issue}
-				{#if issue}
+		{#each issuesMatrix as row, i}
+			{#each row as issue, j}
+				{#if i === 0 && j === 0}
+					<div>Important ↓ Easy →</div>
+				{:else if issue}
 					<a href={issue.url} title={issue.title}>#{issue.number}</a>
 				{:else}
 					<div class="empty" />
@@ -135,19 +127,49 @@
 {/if}
 
 <style>
+	input#sorting {
+		position: fixed;
+		bottom: 2rem;
+		left: 2rem;
+		height: 3rem;
+		width: 3rem;
+	}
+	:global(body) {
+		height: 100vh;
+		margin: 0;
+		padding: 0;
+		background: #1f1f1f;
+		color: white;
+	}
 	.matrix {
 		display: grid;
 		grid-template-columns: repeat(var(--cols), 1fr);
 		grid-template-rows: repeat(var(--rows), 1fr);
+		height: 100%;
 	}
 	.packed {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		height: 90vh;
 	}
+	.matrix > * {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.2em;
+		font-family: Space Mono;
+		text-decoration: none;
+		color: white;
+		border: 1px solid rgba(255, 255, 255, 10%);
+		font-weight: bold;
+	}
+	.matrix a:hover, .matrix a:focus {
+		background: #2f2f2f;
+		color: #1DD189;
+	}
 	.issue {
 		font-size: 0.75rem;
-		border: 1px solid black;
+		border: 1px solid rgba(255, 255, 255, 10%);
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
