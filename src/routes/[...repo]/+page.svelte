@@ -117,7 +117,7 @@
 				{#if i === 0 && j === 0}
 					<div>Important ↓ Easy →</div>
 				{:else if issue}
-					<a href={issue.url} title={issue.title}>#{issue.number}</a>
+					<a href={issue.url} title={issue.title}>{issue.number}</a>
 				{:else}
 					<div class="empty" />
 				{/if}
