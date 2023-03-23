@@ -16,13 +16,16 @@ export type SaveData = {
 };
 
 async function issuesFromGitlab(url: URL): Promise<Issue[]> {
-	const { stdout } = await execa(
-		'glab',
-		['issue', 'list', '-a', '@me', '-R', url.toString(), '-P', '100'],
-		{
-			cwd: '/home/ewen'
-		}
-	);
+	const { stdout } = await execa('glab', [
+		'issue',
+		'list',
+		'-a',
+		'@me',
+		'-R',
+		url.toString(),
+		'-P',
+		'100'
+	]);
 
 	return stdout
 		.split('\n')
@@ -38,13 +41,16 @@ async function issuesFromGitlab(url: URL): Promise<Issue[]> {
 }
 
 async function issuesFromGithub(url: URL): Promise<Issue[]> {
-	const { stdout } = await execa(
-		'gh',
-		['issue', 'list', '-R', url.toString(), '-a', '@me', '--json', 'number,title,url'],
-		{
-			cwd: '/home/ewen'
-		}
-	);
+	const { stdout } = await execa('gh', [
+		'issue',
+		'list',
+		'-R',
+		url.toString(),
+		'-a',
+		'@me',
+		'--json',
+		'number,title,url'
+	]);
 
 	return JSON.parse(stdout) as Issue[];
 }
