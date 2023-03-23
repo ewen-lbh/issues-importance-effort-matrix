@@ -2,6 +2,7 @@
 	import type { PageData, Snapshot } from './$types';
 	import type { Issue } from './+page.server';
 	import DragDropList, { VerticalDropZone, reorder, type DropEvent } from 'svelte-dnd-list';
+	import { page } from '$app/stores';
 
 	export let data: PageData;
 	let importance: number[];
@@ -42,7 +43,7 @@
 		await fetch(
 			`?importance=${encodeURIComponent(JSON.stringify(importance))}&effort=${encodeURIComponent(
 				JSON.stringify(effort)
-			)}`
+			)}` + ($page.url.searchParams.has('git') ? `&git=${$page.url.searchParams.get('git')}` : ``)
 		);
 	}
 
@@ -50,7 +51,7 @@
 
 	let dialog;
 
-    let binarySorting = false;
+	let binarySorting = false;
 </script>
 
 <input type="checkbox" name="sorting" id="sorting" bind:checked={sorting} on:change={saveChanges} />
@@ -109,14 +110,21 @@
 {:else}
 	<div
 		class="matrix"
-		style:--rows={issuesMatrix[0]?.length ?? 0}
-		style:--cols={issuesMatrix.length}
+		style:--rows={issuesMatrix[0]?.length ?? 0 + 1}
+		style:--cols={issuesMatrix.length + 1}
 	>
+		{#each issuesMatrix as _, j}
+			{#if j === 0}
+				<div class="header">Important ↓ Easy →</div>
+			{:else}
+				<div class="empty header" />
+			{/if}
+		{/each}
+		<div class="empty header" />
 		{#each issuesMatrix as row, i}
+			<div class="empty header" />
 			{#each row as issue, j}
-				{#if i === 0 && j === 0}
-					<div>Important ↓ Easy →</div>
-				{:else if issue}
+				{#if issue}
 					<a href={issue.url} title={issue.title}>{issue.number}</a>
 				{:else}
 					<div class="empty" />
@@ -163,9 +171,10 @@
 		border: 1px solid rgba(255, 255, 255, 10%);
 		font-weight: bold;
 	}
-	.matrix a:hover, .matrix a:focus {
+	.matrix a:hover,
+	.matrix a:focus {
 		background: #2f2f2f;
-		color: #1DD189;
+		color: #1dd189;
 	}
 	.issue {
 		font-size: 0.75rem;

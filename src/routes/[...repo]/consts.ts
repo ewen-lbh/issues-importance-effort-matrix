@@ -1,2 +1,2 @@
 
-export const SAVE_FILE = '/home/ewen/.local/share/issuematrix.json';
+export const SAVES_DIR = '/home/ewen/.local/share/issuesmatrix';

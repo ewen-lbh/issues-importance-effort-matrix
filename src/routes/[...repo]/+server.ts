@@ -1,23 +1,24 @@
 import type { RequestHandler } from './$types';
-import { SAVE_FILE } from './consts';
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { SAVES_DIR } from './consts';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
+import path from 'path';
 
 export const GET: RequestHandler = async ({ url, params }) => {
 	const importance = JSON.parse(url.searchParams.get('importance') ?? '[]');
 	const effort = JSON.parse(url.searchParams.get('effort') ?? '[]');
 
-	const otherData = existsSync(SAVE_FILE) ? JSON.parse(readFileSync(SAVE_FILE)) : {};
+	mkdirSync(SAVES_DIR, { recursive: true });
+	const saveFilepath = path.join(SAVES_DIR, params.repo + '.json');
+	const otherData = existsSync(saveFilepath) ? JSON.parse(readFileSync(saveFilepath)) : {};
 
-	const jsoned = JSON.stringify(
-		{
-			...otherData,
-			[params.repo]: { importance, effort }
-		},
-		null,
-		4
-	);
+	if (url.searchParams.has("git")) {
+		otherData.git = url.searchParams.get("git");
+	}
 
-	writeFileSync(SAVE_FILE, jsoned);
+	const jsoned = JSON.stringify({ ...otherData, importance, effort });
 
-	return new Response(`Written ${jsoned} to ${SAVE_FILE}`, { status: 200 });
+	console.log(`Writing ${jsoned} to ${saveFilepath}...`);
+	writeFileSync(saveFilepath, jsoned);
+
+	return new Response(`Written ${jsoned} to ${SAVES_DIR}`, { status: 200 });
 };
