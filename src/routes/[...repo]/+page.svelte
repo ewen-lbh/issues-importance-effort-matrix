@@ -8,7 +8,8 @@
 	let importance: number[];
 	let effort: number[];
 	let issues: Issue[];
-	({ importance, effort, issues } = data);
+	let issuesInMilestone: Issue[];
+	({ importance, effort, issues, issuesInMilestone } = data);
 
 	let sorting: boolean = false;
 
@@ -31,7 +32,7 @@
 		for (let importanceIndex = 0; importanceIndex < importance.length; importanceIndex++) {
 			for (let effortIndex = 0; effortIndex < effort.length; effortIndex++) {
 				issuesMatrix[importanceIndex][effortIndex] =
-					issues.find(
+					issuesInMilestone.find(
 						(issue) =>
 							issue.number === importance[importanceIndex] && issue.number === effort[effortIndex]
 					) ?? null;

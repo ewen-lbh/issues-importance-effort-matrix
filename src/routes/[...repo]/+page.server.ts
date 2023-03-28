@@ -15,7 +15,14 @@ export type SaveData = {
 	git?: string;
 };
 
-async function issuesFromGitlab(url: URL): Promise<Issue[]> {
+async function getIssues(url: URL, milestone: string | null = null): Promise<Issue[]> {
+	if (url.hostname === 'github.com') {
+		return await issuesFromGithub(url, milestone);
+	}
+	return await issuesFromGitlab(url, milestone);
+}
+
+async function issuesFromGitlab(url: URL, milestone: string | null): Promise<Issue[]> {
 	const { stdout } = await execa('glab', [
 		'issue',
 		'list',
@@ -24,7 +31,8 @@ async function issuesFromGitlab(url: URL): Promise<Issue[]> {
 		'-R',
 		url.toString(),
 		'-P',
-		'100'
+		'100',
+		...(milestone ? ['-m', milestone] : [])
 	]);
 
 	return stdout
@@ -40,16 +48,18 @@ async function issuesFromGitlab(url: URL): Promise<Issue[]> {
 		});
 }
 
-async function issuesFromGithub(url: URL): Promise<Issue[]> {
+async function issuesFromGithub(url: URL, milestone: string | null): Promise<Issue[]> {
+	console.log(url);
 	const { stdout } = await execa('gh', [
 		'issue',
 		'list',
 		'-R',
-		url.toString(),
+		url.toString().replace(/^https?:\/\/github.com\//i, ''),
 		'-a',
 		'@me',
 		'--json',
-		'number,title,url'
+		'number,title,url',
+		...(milestone ? ['-m', milestone] : [])
 	]);
 
 	return JSON.parse(stdout) as Issue[];
@@ -64,7 +74,8 @@ export const load: PageServerLoad = async ({ params, url }) => {
 		effort: []
 	};
 	mkdirSync(SAVES_DIR, { recursive: true });
-	if (existsSync(saveFilepath)) {
+	if (existsSync(saveFilepath) && !url.searchParams.get('reset')) {
+		console.log('Save file exists');
 		console.log(JSON.parse(readFileSync(saveFilepath))[params.repo]);
 		saveData = JSON.parse(readFileSync(saveFilepath));
 		console.log(`Got ${JSON.stringify(saveData)}`);
@@ -74,15 +85,9 @@ export const load: PageServerLoad = async ({ params, url }) => {
 		saveData?.git ?? url.searchParams.get('git') ?? `https://github.com/${params.repo}`
 	);
 
-	let issues: Issue[] = [];
-	switch (remoteUrl.hostname) {
-		case 'github.com':
-			issues = await issuesFromGithub(remoteUrl);
-			break;
-		default:
-			issues = await issuesFromGitlab(remoteUrl);
-			break;
-	}
+	const issues = await getIssues(remoteUrl);
+
+	const issuesInMilestone = await getIssues(remoteUrl, url.searchParams.get('milestone'));
 
 	let importance = issues.map((i) => i.number);
 	let effort = issues.map((i) => i.number);
@@ -95,5 +100,5 @@ export const load: PageServerLoad = async ({ params, url }) => {
 	importance = updatedData(saveData, 'importance');
 	effort = updatedData(saveData, 'effort');
 
-	return { importance, effort, issues };
+	return { importance, effort, issues, issuesInMilestone };
 };
