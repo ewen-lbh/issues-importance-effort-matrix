@@ -4,10 +4,14 @@ import { existsSync, readFileSync, mkdirSync } from 'fs';
 import { SAVES_DIR } from './consts';
 import path from 'path';
 
+const IMPORTANCE_LABEL_ORDER = ['low', 'medium', 'high', 'urgent'].map(l => `importance:${l}`);
+const EFFORT_LABEL_ORDER = ['braindead', 'easy', 'medium', 'hard', 'unknown'].map(l => `difficulty:${l}`);
+
 export type Issue = {
 	number: number;
 	title: string;
 	url: string;
+	labels: string[];
 };
 export type SaveData = {
 	importance: number[];
@@ -26,8 +30,8 @@ async function issuesFromGitlab(url: URL, milestone: string | null): Promise<Iss
 	const { stdout } = await execa('glab', [
 		'issue',
 		'list',
-		'-a',
-		'@me',
+		// '-a',
+		// '@me',
 		'-R',
 		url.toString(),
 		'-P',
@@ -39,10 +43,11 @@ async function issuesFromGitlab(url: URL, milestone: string | null): Promise<Iss
 		.split('\n')
 		.filter((i: string) => i.startsWith('#'))
 		.map((i: string) => {
-			const [number, _identifier, title, _labels, _openedAtRelative, ..._rest] = i.split('\t');
+			const [number, _identifier, title, labels, _openedAtRelative, ..._rest] = i.split('\t');
 			return {
 				number: Number(number.replace('#', '')),
 				title,
+				labels: labels.replace(/^\(/, '').replace(/\)$/, '').split(', '),
 				url: `${url}/-/issues/${number.replace('#', '')}`
 			};
 		});
@@ -73,7 +78,9 @@ export const load: PageServerLoad = async ({ params, url }) => {
 		importance: [],
 		effort: []
 	};
+
 	mkdirSync(SAVES_DIR, { recursive: true });
+
 	if (existsSync(saveFilepath) && !url.searchParams.get('reset')) {
 		console.log('Save file exists');
 		console.log(JSON.parse(readFileSync(saveFilepath))[params.repo]);
@@ -87,18 +94,45 @@ export const load: PageServerLoad = async ({ params, url }) => {
 
 	const issues = await getIssues(remoteUrl);
 
+	console.log(issues)
+
 	const issuesInMilestone = await getIssues(remoteUrl, url.searchParams.get('milestone'));
 
-	let importance = issues.map((i) => i.number);
-	let effort = issues.map((i) => i.number);
+	let importance = issues.sort((a, b) => {
+		const importanceLabel = (a: Issue) => a.labels.find((l) => IMPORTANCE_LABEL_ORDER.includes(l));
+		const aLabel = importanceLabel(a);
+		const bLabel = importanceLabel(b);
+		if (!aLabel && !bLabel) return 0;
+		if (!aLabel) return 1;
+		if (!bLabel) return -1;
+		return IMPORTANCE_LABEL_ORDER.indexOf(bLabel) - IMPORTANCE_LABEL_ORDER.indexOf(aLabel);
+	} ).map((i) => i.number);
+	let effort = issues.sort((a, b) => {
+	const effortLabel = (a: Issue) => a.labels.find((l) => EFFORT_LABEL_ORDER.includes(l));
+	const aLabel = effortLabel(a);
+	const bLabel = effortLabel(b);
+	if (!aLabel && !bLabel) return 0;
+	if (!aLabel) return 1;
+	if (!bLabel) return -1;
+	return EFFORT_LABEL_ORDER.indexOf(bLabel) - EFFORT_LABEL_ORDER.indexOf(aLabel);	
+	} ).map((i) => i.number);
 
 	const updatedData = (sorteds: SaveData, k: 'importance' | 'effort'): number[] => [
 		...issues.map((i) => i.number).filter((no) => !sorteds[k].includes(no)),
 		...sorteds[k].filter((no) => issues.map((i) => i.number).includes(no))
 	];
 
+	console.log(importance, effort);
+
 	importance = updatedData(saveData, 'importance');
 	effort = updatedData(saveData, 'effort');
 
-	return { importance, effort, issues, issuesInMilestone };
+	return { remoteUrl: {
+		hostname: remoteUrl.hostname,
+		host: remoteUrl.host,
+		pathname: remoteUrl.pathname,
+	}, isGitlab: remoteUrl.hostname !== 'github.com' , importance, effort, issues, issuesInMilestone, labels: {
+		importance: IMPORTANCE_LABEL_ORDER,
+		effort: EFFORT_LABEL_ORDER
+	} };
 };

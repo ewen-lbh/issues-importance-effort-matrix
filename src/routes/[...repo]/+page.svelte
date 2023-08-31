@@ -12,6 +12,7 @@
 	({ importance, effort, issues, issuesInMilestone } = data);
 
 	let sorting: boolean = false;
+	let categorized = true
 
 	export const snapshot: Snapshot = {
 		capture() {
@@ -53,16 +54,51 @@
 	let dialog;
 
 	let binarySorting = false;
+
+	const displayIssue = (issues, inside, index) => {
+	const issue = issues.find( i => inside[index] === i.number);
+	return `${issue?.title} ${issue?.labels.map(l => `~${l}`).join(' ')}`
+	}
+
+	function urlIssuesOfLabel(...labels: string[]): string {
+		return data.isGitlab ? `https://${data.remoteUrl.host}/${data.remoteUrl.pathname}/-/issues?${labels.map(label => `label_name[]=${encodeURIComponent(
+						label
+					)}`).join('&')}` : `https://${data.remoteUrl.host}/${data.remoteUrl.pathname}/issues?q=${labels.map(label => `label%3A${encodeURIComponent(
+						label
+					)}`).join('+')}`
+	}
 </script>
 
 <input type="checkbox" name="sorting" id="sorting" bind:checked={sorting} on:change={saveChanges} />
 
-{#if sorting}
+{#if categorized}
+<div class="matrix"
+style:--rows={data.labels.importance.length + 1}
+style:--cols={data.labels.effort.length + 1}
+>
+			<div class="header empty"></div>
+			{#each data.labels.effort as label}
+				<a href="{urlIssuesOfLabel(label)}" class="header">{label}</a>
+			{/each}
+		{#each data.labels.importance as im}
+		<a href="{urlIssuesOfLabel(im)}" class="header">{im}</a>
+			
+			{#each data.labels.effort as ef}
+				<div class="multiple-issues">
+				<a href="{urlIssuesOfLabel(ef, im)}" class="all">all</a>
+				{#each data.issues.filter(i => i.labels.includes(ef) && i.labels.includes(im)) as issue }	
+				<a title="{issue.title} {issue.labels.filter(l => !l.startsWith('importance:') && !l.startsWith('difficulty:')).map(l => `[${l}]`).join(' ')}" href="https://{data.remoteUrl.host}{data.remoteUrl.pathname}{data.isGitlab ? '/-/issues/' : '/issue/'}{issue.number}">#{issue.number}</a>
+				{/each}
+				</div>
+			{/each}
+		{/each}
+</div>
+{:else if sorting}
 	<div class="packed">
 		<!-- <h2>Importance (current)</h2> -->
-		<h2>Importance (new)</h2>
+		<h2>Importance </h2>
 		<!-- <h2>Effort (current)</h2> -->
-		<h2>Effort (new)</h2>
+		<h2>Effort </h2>
 		<!-- <div>
 			{#each importance as issueNumber}
 				<div class="issue">{issues.find((i) => i.number === issueNumber)?.title}</div>
@@ -82,8 +118,8 @@
 				await saveChanges();
 			}}
 		>
-			<div style:height="{itemsHeight}px" class="issue">
-				{issues.find((i) => i.number === importance[index])?.title}
+		<div style:height="{itemsHeight}px" class="issue" title={displayIssue(issues, importance, index)}>
+				{displayIssue(issues, importance, index)}
 			</div>
 		</DragDropList>
 		<!-- <div>
@@ -103,8 +139,8 @@
 				await saveChanges();
 			}}
 		>
-			<div style:height="{itemsHeight}px" class="issue">
-				{issues.find((i) => i.number === effort[index])?.title}
+		<div style:height="{itemsHeight}px" class="issue" title={displayIssue(issues, effort, index)}>
+				{displayIssue(issues, effort, index)}
 			</div>
 		</DragDropList>
 	</div>
@@ -178,7 +214,6 @@
 		color: #1dd189;
 	}
 	.issue {
-		font-size: 0.75rem;
 		border: 1px solid rgba(255, 255, 255, 10%);
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -187,8 +222,23 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		font-size: 0.75rem;
 	}
 	/* :global([data-dnd-item]) {
         height: unset !important;
     } */
+
+	.multiple-issues {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: space-evenly;
+		align-items: center;
+
+		
+	}
+	.multiple-issues a {
+		text-decoration: none;
+		color: white;
+	}
 </style>
