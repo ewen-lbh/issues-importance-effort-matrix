@@ -5,7 +5,7 @@ import { SAVES_DIR } from './consts';
 import path from 'path';
 
 const IMPORTANCE_LABEL_ORDER = ['low', 'medium', 'high', 'urgent'].map(l => `importance:${l}`);
-const EFFORT_LABEL_ORDER = ['braindead', 'easy', 'medium', 'hard', 'unknown'].map(l => `difficulty:${l}`);
+const EFFORT_LABEL_ORDER = ['braindead', 'easy', 'moderate', 'hard', 'unknown'].map(l => `difficulty:${l}`);
 
 export type Issue = {
 	number: number;
